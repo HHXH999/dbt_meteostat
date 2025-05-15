@@ -79,7 +79,7 @@ SELECT
     dw.wind_peakgust_kmh
 FROM daily_airport_flight_summary fs
 JOIN airports a ON fs.airport_code = a.faa -- 连接机场信息 (如果需要名称等)
-JOIN daily_weather dw ON fs.airport_code = dw.station_id AND fs.date = dw.date -- 连接天气数据
+JOIN daily_weather dw ON fs.airport_code = dw.station_id::VARCHAR AND fs.date = dw.date -- 连接天气数据
 -- WHERE dw.station_id IS NOT NULL -- 这一行确保只选择有天气数据的机场和日期组合，因为是 INNER JOIN，所以如果天气数据没有匹配，该行航班数据也不会出现
 ORDER BY
     fs.date,
