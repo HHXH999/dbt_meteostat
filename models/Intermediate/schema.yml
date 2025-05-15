@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: int_order_enriched
+    description: "Enriched order model with customer and product details"
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order"
+      - name: customer_id
+        description: "ID of the customer who placed the order"
+      - name: total_value
+        description: "Total value of the order (quantity * price)"
