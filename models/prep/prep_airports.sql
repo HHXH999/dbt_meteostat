@@ -16,4 +16,4 @@ WITH airports_reordered AS (
         -- Add any other columns from your staging_airports table here, in your desired order
     FROM {{ ref('staging_airports') }}
 )
-SELECT * FROM airports_reorder
+SELECT * FROM airports_reordered
