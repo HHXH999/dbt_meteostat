@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: s_zhenyang   # <--- 这个 'name' 必须和模型中 source() 的第一个参数匹配！
+    #database: nf260305  # database: your_database_name # 可选，如果和 profile 一致
+    schema: s_zhenyang # 你的原始表所在的真实数据库 schema，例如 'public' 或 's_zhenyang'
+    tables:
+      - name: orders_raw    # <--- 这个 'name' 必须和模型中 source() 的第二个参数匹配！
+      - name: customers_raw
+      - name: products_raw
+      - name: return_raw
+     # ... 其他表
